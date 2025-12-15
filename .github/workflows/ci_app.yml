@@ -11,15 +11,15 @@ jobs:
         uses: actions/checkout@v3 
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run setup
-        run: make setup # Запуск цели 'install and build' из Makefile
+      - name: Run build
+        run: make build 
        
       - name: Run start
         run: make start
